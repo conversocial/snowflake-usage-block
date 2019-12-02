@@ -1,4 +1,4 @@
-connection: "snowflake"
+connection: "snowflake_conversocial"
 
 # include all the views
 include: "*.view"

@@ -1,10 +1,10 @@
-- dashboard: snowflake_usage
-  title: Snowflake Usage
+- dashboard: snowflake_usage_eu
+  title: Snowflake Usage (EU)
   layout: newspaper
   elements:
   - title: Data Loading
     name: Data Loading
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: load_history
     type: single_value
     fields: [load_history.total_row_count, load_history.total_error_count]
@@ -64,7 +64,7 @@
     height: 7
   - title: Total Rows Loaded - Last 2 Weeks
     name: Total Rows Loaded - Last 2 Weeks
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: load_history
     type: looker_column
     fields: [load_history.total_row_count, load_history.last_load_time_date]
@@ -117,7 +117,7 @@
     height: 7
   - title: Query Volume and Runtime
     name: Query Volume and Runtime
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: query_history
     type: looker_area
     fields: [query_history.start_week, query_history.query_count, query_history.average_execution_time]
@@ -191,7 +191,7 @@
     height: 8
   - title: Total Jobs (MTD)
     name: Total Jobs (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: query_history
     type: single_value
     fields: [query_history.current_mtd_query_count, query_history.prior_mtd_query_count]
@@ -241,7 +241,7 @@
     height: 4
   - title: Untitled
     name: Untitled
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: warehouse_metering_history
     type: single_value
     fields: [warehouse_metering_history.current_mtd_credits_used, warehouse_metering_history.prior_mtd_credits_used]
@@ -291,7 +291,7 @@
     height: 4
   - title: Execution Time on Select Statements
     name: Execution Time on Select Statements
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: query_history
     type: single_value
     fields: [query_history.current_mtd_avg_exec_time, query_history.prior_mtd_avg_exec_time]
@@ -346,7 +346,7 @@
     height: 4
   - title: Untitled3
     name: Untitled3
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: storage_usage
     type: single_value
     fields: [storage_usage.curr_mtd_billable_tb, storage_usage.prior_mtd_billable_tb]
@@ -396,7 +396,7 @@
     height: 4
   - title: Warehouse Metering History - Total Credits by Month
     name: Warehouse Metering History - Total Credits by Month
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: warehouse_metering_history
     type: looker_column
     fields: [warehouse_metering_history.start_month, warehouse_metering_history.total_credits_used,
@@ -449,7 +449,7 @@
     height: 8
   - title: Credits Used Over Time by Warehouse (MTD)
     name: Credits Used Over Time by Warehouse (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: warehouse_metering_history
     type: looker_column
     fields: [warehouse_metering_history.warehouse_name, warehouse_metering_history.total_credits_used,
@@ -504,7 +504,7 @@
     height: 8
   - title: Credits Used By Warehouse
     name: Credits Used By Warehouse
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: warehouse_metering_history
     type: looker_column
     fields: [warehouse_metering_history.warehouse_name, warehouse_metering_history.total_credits_used]
@@ -557,7 +557,7 @@
     height: 8
   - title: Total Jobs by Warehouse (MTD)
     name: Total Jobs by Warehouse (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: query_history
     type: looker_column
     fields: [query_history.warehouse_name, query_history.prior_mtd_query_count, query_history.current_mtd_query_count]
@@ -628,7 +628,7 @@
     height: 8
   - title: Billable TB by Month
     name: Billable TB by Month
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: storage_usage
     type: looker_line
     fields: [storage_usage.billable_tb, storage_usage.usage_month, storage_usage.average_storage_tb]
@@ -686,7 +686,7 @@
     height: 7
   - title: Average Execution Time by Query Type and Warehouse Size (MTD)
     name: Average Execution Time by Query Type and Warehouse Size (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: query_history
     type: looker_column
     fields: [query_history.query_type, query_history.average_execution_time, query_history.query_count,
@@ -759,7 +759,7 @@
     height: 8
   - title: Average Execution Time by User (MTD)
     name: Average Execution Time by User (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: query_history
     type: looker_bar
     fields: [query_history.user_name, query_history.average_execution_time, query_history.median_queued_overload_time]
@@ -821,7 +821,7 @@
     height: 8
   - title: Database Storage Growth
     name: Database Storage Growth
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: storage_usage
     type: looker_line
     fields: [storage_usage.billable_tb, storage_usage.usage_month, storage_usage.database_name]
@@ -906,7 +906,7 @@
     height: 7
   - title: Failed Logins by User and Connecting Client (MTD)
     name: Failed Logins by User and Connecting Client (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: login_history
     type: table
     fields: [login_history.user_name, login_history.logins, login_history.total_failed_logins,
@@ -968,7 +968,7 @@
     height: 9
   - title: Failed Logins by User (MTD)
     name: Failed Logins by User (MTD)
-    model: snowflake_usage_block
+    model: snowflake_usage_eu
     explore: login_history
     type: table
     fields: [login_history.user_name, login_history.logins, login_history.total_failed_logins,

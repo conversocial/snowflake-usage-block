@@ -459,6 +459,7 @@
       warehouse_metering_history.start_date: 1 months
     sorts: [warehouse_metering_history.warehouse_name 0, warehouse_metering_history.start_date]
     limit: 500
+    column_limit: 12
     total: true
     query_timezone: UTC
     color_application:

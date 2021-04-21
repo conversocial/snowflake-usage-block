@@ -6,7 +6,6 @@ label: "Snowflake Usage (EU)"
 connection: "snowflake_conversocial_eu"
 
 
-# redefine separate datagroup
 datagroup: snowflake_usage_eu_default_datagroup {
   max_cache_age: "1 hour"
 }

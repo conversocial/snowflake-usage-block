@@ -27,3 +27,5 @@ explore: automatic_clustering_history {}
 explore: pipe_usage_history {}
 
 explore: credit_usage_history {}
+
+explore: users {}
